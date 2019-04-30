@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 import {BrowserRouter, Route, withRouter} from "react-router-dom";
-import {HeaderComponent} from "../component/header.component";
-import {RegistrationComponent} from "../component/registration.component";
-import {MainComponent} from "../component/main.component";
+
+import RegistrationComponent from "../component/RegistrationComponent/RegistrationComponent";
+import MainComponent from "../component/MainComponent/MainComponent";
+import HeaderComponent from "../component/HeaderComponent/HeaderComponent";
 
 ReactDOM.render(
     <BrowserRouter>

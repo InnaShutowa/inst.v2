@@ -6,7 +6,7 @@ module.exports = {
         filename: "./main.js"
     },
     devServer: {
-        contentBase: "C:\\Users\\Инна\\Desktop\\inst.v2",
+        contentBase: "C:\\inst.v2",
         compress: true,
         port: 9000,
         watchContentBase: true,

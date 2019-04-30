@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import {RegistrationComponent} from "../component/registration.component";
+import {RegistrationComponent} from "../component/RegistrationComponent/RegistrationComponent";
 import {BrowserRouter, Route} from "react-router-dom";
 
 ReactDOM.render(
