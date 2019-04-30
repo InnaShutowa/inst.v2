@@ -1,0 +1,87 @@
+@media screen and (max-width: 800px) {
+    .inline{
+        align: center;
+        background: url("/materials/pictt.jpg");
+        height: 150px;
+        width: 100%;
+    }
+    .blocks{
+        text-align: center;
+        float: left;
+        padding-top: 3%;
+        margin-right: 30%;
+        margin-left: 40%;
+        font-family: "Century Schoolbook", serif;
+        color: antiquewhite;
+        font-size: medium;
+    }
+    .links{
+        align: center;
+        float: left;
+        font-family: "Century Schoolbook", serif;
+        color: antiquewhite;
+        font-size: medium;
+    }
+}
+@media screen and (max-width: 2000px) and (min-width: 800px){
+    .inline{
+        background: url("/materials/pictt.jpg");
+        display: inline-block;
+        height: 200px;
+        width: 100%;
+    }
+    .blocks{
+        float: left;
+        padding-left: 20%;
+        padding-top: 6%;
+        text-align: center;
+        font-family: "Century Schoolbook", serif;
+        color: antiquewhite;
+        font-size: large;
+    }
+    .links{
+        padding-top: 6%;
+        font-family: "Century Schoolbook", serif;
+        color: antiquewhite;
+        font-size: large;
+    }
+}
+.button{
+    text-align: center;
+    margin-top: 3%;
+}
+.buttonUpDown{
+    width: 10%;
+    font-family: "Century Schoolbook", serif;
+    font-size: medium;
+    color: antiquewhite;
+    height: 50px;
+    background-color: #000;
+    background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto;
+    background-position: 200% 0, 0 0;
+    box-shadow: rgba(0,0,0,.3) 0 2px 5px;
+}
+.buttonChange{
+    width: 30%;
+    font-family: "Century Schoolbook", serif;
+    font-size: medium;
+    background-color: #D2691E;
+    color: antiquewhite;
+    height: 50px;
+    background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto;
+    background-position: 200% 0, 0 0;
+    box-shadow: rgba(0,0,0,.3) 0 2px 5px;
+}
+.images{
+    margin-top: 3%;
+    display: inline-block;
+}
+.image{
+    max-width: 40%;
+    max-height: 30%;
+    margin: 2%;
+}
