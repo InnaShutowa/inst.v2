@@ -38,6 +38,8 @@
         font-family: "Century Schoolbook", serif;
         color: antiquewhite;
         font-size: large;
+        max-height: 3%;
+        max-width: 10%;
     }
     .links{
         padding-top: 6%;

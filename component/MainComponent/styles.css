@@ -4,7 +4,8 @@
     margin-top: 3%;
 }
 .buttonUpDown{
-    width: 10%;
+    float: top;
+    width: 15%;
     font-family: "Century Schoolbook", serif;
     font-size: medium;
     color: antiquewhite;
@@ -17,6 +18,7 @@
     box-shadow: rgba(0,0,0,.3) 0 2px 5px;
 }
 .buttonChange{
+    float: top;
     width: 30%;
     font-family: "Century Schoolbook", serif;
     font-size: medium;
@@ -28,15 +30,6 @@
     background-size: 200% 100%, auto;
     background-position: 200% 0, 0 0;
     box-shadow: rgba(0,0,0,.3) 0 2px 5px;
-}
-.images{
-    margin-top: 3%;
-    display: inline-block;
-}
-.image{
-    max-width: 40%;
-    max-height: 30%;
-    margin: 2%;
 }
 .popular{
     padding-top: -10px;

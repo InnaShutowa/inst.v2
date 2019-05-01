@@ -14,7 +14,6 @@ ReactDOM.render(
             <Route exact path={"/registration"} component={withRouter(RegistrationComponent)}/>
             <Route exact path={"/main"} component={withRouter(MainComponent)}/>
         </div>
-
     </BrowserRouter>,
     document.getElementById("root")
 );
