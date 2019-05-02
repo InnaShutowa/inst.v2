@@ -1,45 +1,24 @@
-
 .button{
-    text-align: center;
-    margin-top: 3%;
-}
-.buttonUpDown{
-    float: top;
-    width: 15%;
-    font-family: "Century Schoolbook", serif;
+    border-radius: 10%;
+    background-color: white;
+    font-family: fantasy ;
+    color: gray;
     font-size: medium;
-    color: antiquewhite;
-    height: 50px;
-    background-color: #000;
-    background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
-    background-repeat: no-repeat;
-    background-size: 200% 100%, auto;
-    background-position: 200% 0, 0 0;
-    box-shadow: rgba(0,0,0,.3) 0 2px 5px;
-}
-.buttonChange{
-    float: top;
-    width: 30%;
-    font-family: "Century Schoolbook", serif;
-    font-size: medium;
-    background-color: #D2691E;
-    color: antiquewhite;
-    height: 50px;
-    background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
-    background-repeat: no-repeat;
-    background-size: 200% 100%, auto;
-    background-position: 200% 0, 0 0;
-    box-shadow: rgba(0,0,0,.3) 0 2px 5px;
-}
-.popular{
-    padding-top: -10px;
-    height: 3%;
-    background-color: #696969;
 }
 .font{
-    font-family: "Century Schoolbook", serif;
-    font-size: xx-large;
-    font-style: inherit;
+    float: left;
+    padding-right: 1%;
+    font-family: fantasy;
+    font-weight: lighter;
     color: black;
     text-align: center;
+}
+.photos{
+    text-align: center;
+}
+.category{
+    padding-top: 1%;
+    padding-left: 10%;
+    width: 100%;
+    display: inline-block;
 }

@@ -1,50 +1,51 @@
 @media screen and (max-width: 800px) {
     .inline{
         align: center;
-        background: url("/materials/pictt.jpg");
+        background: url("/materials/fon1.jpg");
         height: 150px;
         width: 100%;
     }
-    .blocks{
+    .text{
         text-align: center;
-        float: left;
-        padding-top: 3%;
-        margin-right: 30%;
-        margin-left: 40%;
-        font-family: "Century Schoolbook", serif;
-        color: antiquewhite;
-        font-size: medium;
-    }
-    .links{
-        align: center;
-        float: left;
-        font-family: "Century Schoolbook", serif;
-        color: antiquewhite;
-        font-size: medium;
+        font-size: 30pt;
+        font-family: fantasy ;
+        color: white;
     }
 }
 @media screen and (max-width: 2000px) and (min-width: 800px){
-    .inline{
-        background: url("/materials/pictt.jpg");
+    .links{
+        width: 100%;
         display: inline-block;
-        height: 200px;
+        background-color: white;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .link{
+        padding-left: 17%;
+        padding-right: 8%;
+        float: left;
+        font-family: fantasy ;
+        color: black;
+        font-size: medium;
+        display: inline-block;
+    }
+    .internalLink{
+        float: left;
+    }
+    .text{
+        text-align: center;
+        font-size: 30pt;
+        font-family: fantasy ;
+        color: white;
+    }
+    .inline{
+        background: url("/materials/fon1.jpg") no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        height: 130px;
         width: 100%;
     }
-    .blocks{
-        float: left;
-        padding-left: 20%;
-        padding-top: 6%;
-        text-align: center;
-        font-family: "Century Schoolbook", serif;
-        color: antiquewhite;
-        font-size: large;
-        max-height: 3%;
-        max-width: 10%;
-    }
-    .links{
-        padding-top: 6%;
-        font-family: "Century Schoolbook", serif;
-        color: antiquewhite;
-        font-size: large;
-    }
+
+
+
 }

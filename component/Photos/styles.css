@@ -1,9 +1,21 @@
 .images{
-    margin-top: 3%;
+    text-align: center;
+    margin-top: 2%;
     display: inline-block;
+    margin-left: 5%;
 }
 .image{
-    max-width: 40%;
-    max-height: 30%;
-    margin: 2%;
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    float: left;
+    padding: 1%;
+}
+.pos{
+    background: #ffffff;
+    margin-left: 1%;
+    width: 30%;
+    height: 30%;
+    padding-bottom: 3%;
+    float: left;
 }

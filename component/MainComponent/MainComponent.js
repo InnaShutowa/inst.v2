@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 import style from "./styles.css";
 import Photos from "../Photos/Photos";
+import {Link} from "react-router-dom";
 
 
 class MainComponent extends Component {
     render() {
         return <div>
-                    <p className={style.font}>Популярное</p>
-                    <div className={style.button}>
-                        <button className={style.buttonUpDown}>↑ по возрастанию</button>
-                        <button className={style.buttonChange}>перемешать</button>
-                        <button className={style.buttonUpDown}>↓ по убыванию</button>
-                        <br/>
-                            {
-                                Photos
-                            }
+                    <div className={style.category}>
+                        <div className={style.font}><button className={style.button}>Популярное</button></div>
+                        <a className={style.font}>|</a>
+                        <div className={style.font}><button className={style.button}> Новое </button></div>
+                    </div>
+
+                    <div>
+                        {
+                            Photos
+                        }
                     </div>
                 </div>
     }
