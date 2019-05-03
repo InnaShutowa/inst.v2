@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import style from "./styles.css";
 import Photos from "../Photos/Photos";
+import {connect} from "react-redux";
 
+const mapStateToProps = function(state){
+    return {
+        photos: state.photos,
+        photosById: state.photosById
+    }
+};
 
 class MainComponent extends Component {
-
     render() {
         return <div>
                     <div className={style.category}>
@@ -14,10 +20,10 @@ class MainComponent extends Component {
                     </div>
 
                     <div className={style.photo}>
-                        <Photos/>
+                        <Photos photos = {this.props.photosById}/>
                     </div>
                 </div>
     }
 }
 
-export default MainComponent;
+export default  connect(mapStateToProps) (MainComponent);

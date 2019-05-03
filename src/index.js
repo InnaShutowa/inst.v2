@@ -14,10 +14,9 @@ import AddPhotoAction from "../actions/AddPhotoAction";
 
 const store = createStore(Reducer);
 
-store.dispatch(AddPhotoAction("работает", "http://localhost:9000/materials/fon1.jpg","55"));
+store.dispatch(AddPhotoAction("ебушки воробушки, работает", "http://localhost:9000/materials/fon1.jpg","55"));
 
 console.log(store.getState());
-
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
