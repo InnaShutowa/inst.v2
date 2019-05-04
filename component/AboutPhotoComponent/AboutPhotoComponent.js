@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import style from "./styles.css";
+import RatingButtonsComponent from "../RatingButtonsComponent/RatingButtonsComponent";
 
 
 class AboutPhotoComponent extends Component {
@@ -7,11 +8,7 @@ class AboutPhotoComponent extends Component {
         return <div>
             <div className={style.name}>{this.props.name}</div>
 
-            <div className={style.elms}>
-                <button className={style.like}>+</button>
-                <h className={style.text}>{this.props.likes}</h>
-                <button className={style.dislike}>-</button>
-            </div>
+           <RatingButtonsComponent id={this.props.id} likes={this.props.likes}/>
 
         </div>
     }

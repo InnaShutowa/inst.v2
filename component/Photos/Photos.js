@@ -15,7 +15,7 @@ class Photos extends Component{
                         little.map(photo => (
                             <div className={style.cell}>
                                 <img className={style.image} src={photo.url} alt={"photo"}/>
-                                <AboutPhotoComponent name={photo.name} likes={photo.likes}/>
+                                <AboutPhotoComponent name={photo.name} likes={photo.likes} id={photo.id}/>
                             </div>
                         ))
                     }

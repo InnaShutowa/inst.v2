@@ -2,16 +2,18 @@ import React, { Component } from "react";
 import style from "./styles.css";
 import Photos from "../Photos/Photos";
 import {connect} from "react-redux";
+import AddPhotoAction from "../../actions/AddPhotoAction";
 
-const mapStateToProps = function(state){
-    return {
-        photos: state.photos,
-        photosById: state.photosById
-    }
-};
+const mapStateToProps = state=> ({
+    photos: state.photos
+});
+
+
 
 class MainComponent extends Component {
+
     render() {
+        console.log(this.props.photos);
         return <div>
                     <div className={style.category}>
                         <div className={style.font}><button className={style.button}>Популярное</button></div>
@@ -20,10 +22,10 @@ class MainComponent extends Component {
                     </div>
 
                     <div className={style.photo}>
-                        <Photos photos = {this.props.photosById}/>
+                        <Photos photos = {this.props.photos}/>
                     </div>
                 </div>
     }
 }
 
-export default  connect(mapStateToProps) (MainComponent);
+export default connect(mapStateToProps) (MainComponent);
