@@ -57,12 +57,17 @@ function Reducer (state = initialState, action) {
         }
         // изменяем рейтинг (лайк/дизлайк)
         case ChangeRatingConstant:{
-            state.map(photo=>{
+            console.log("изменилось что ли");
+            state.photos.map(photo=>{
                 if (photo.id === action.id){
+                    console.log(action.id);
                     photo.likes+=action.rating;
+                    console.log(photo);
                 }
             });
-            return state;
+            return {
+                photos: state.photos
+            };
         }
         default:{
             return state;

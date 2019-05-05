@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ad8a55e-1de0-414f-837a-1e6e7a9bd7c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/component/AboutPhotoComponent/AboutPhotoComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/AboutPhotoComponent/AboutPhotoComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/AboutPhotoComponent/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/component/AboutPhotoComponent/styles.css" afterDir="false" />
+    <list default="true" id="8ad8a55e-1de0-414f-837a-1e6e7a9bd7c2" name="Default Changelist" comment="//">
+      <change beforePath="$PROJECT_DIR$/actions/ChangeRatingAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/actions/ChangeRatingAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/MainComponent/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/MainComponent/MainComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/Photos/Photos.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/Photos/Photos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/RegistrationComponent/RegistrationComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/RegistrationComponent/RegistrationComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/ActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/RatingLikeButtonComponent/RatingLikeButtonComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/component/RatingLikeButtonComponent/RatingLikeButtonComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reducers/Reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/reducers/Reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/registration.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,20 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/component/RegistrationComponent/RegistrationComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="442">
+              <caret line="26" column="75" lean-forward="true" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -48,10 +32,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/component/RegistrationComponent/RegistrationComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/component/RatingButtonsComponent/RatingButtonsComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/component/RatingLikeButtonComponent/RatingLikeButtonComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/actions/ChangeRatingAction.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/component/MainComponent/MainComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="97">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -62,8 +91,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/component/Photos/Photos.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+            <state relative-caret-position="289">
+              <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/component/AboutPhotoComponent/AboutPhotoComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -74,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reducers/Reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="100">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -122,19 +163,19 @@
         <option value="$PROJECT_DIR$/component/HeaderComponent/HeaderComponent.js" />
         <option value="$PROJECT_DIR$/functions/MakePhotos.js" />
         <option value="$PROJECT_DIR$/constants/ActionTypes.js" />
-        <option value="$PROJECT_DIR$/actions/ChangeRatingAction.js" />
         <option value="$PROJECT_DIR$/component/AboutPhotoComponent/styles.css" />
         <option value="$PROJECT_DIR$/component/RatingLikeButtonComponent/styles.css" />
         <option value="$PROJECT_DIR$/component/RatingButtonsComponent/styles.css" />
         <option value="$PROJECT_DIR$/component/RatingButtonsComponent/RatingButtonsComponent.js" />
         <option value="$PROJECT_DIR$/component/Photos/Photos.js" />
         <option value="$PROJECT_DIR$/component/AboutPhotoComponent/AboutPhotoComponent.js" />
-        <option value="$PROJECT_DIR$/component/RatingLikeButtonComponent/RatingLikeButtonComponent.js" />
         <option value="$PROJECT_DIR$/src/registration.js" />
+        <option value="$PROJECT_DIR$/component/RegistrationComponent/RegistrationComponent.js" />
+        <option value="$PROJECT_DIR$/actions/ChangeRatingAction.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/reducers/Reducer.js" />
+        <option value="$PROJECT_DIR$/component/RatingLikeButtonComponent/RatingLikeButtonComponent.js" />
         <option value="$PROJECT_DIR$/component/MainComponent/MainComponent.js" />
-        <option value="$PROJECT_DIR$/component/RegistrationComponent/RegistrationComponent.js" />
       </list>
     </option>
   </component>
@@ -178,6 +219,12 @@
               <item name="inst.v2" type="462c0819:PsiDirectoryNode" />
               <item name="component" type="462c0819:PsiDirectoryNode" />
               <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inst.v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inst.v2" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="RatingButtonsComponent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inst.v2" type="b2602c69:ProjectViewProjectNode" />
@@ -247,12 +294,12 @@
       <workItem from="1556461495508" duration="26144000" />
       <workItem from="1556634954494" duration="594000" />
       <workItem from="1556653584943" duration="1598000" />
-      <workItem from="1556658428873" duration="57512000" />
+      <workItem from="1556658428873" duration="62104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85848000" />
+    <option name="totallyTimeSpent" value="90440000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -473,47 +520,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/actions/ChangeRatingAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component/RatingButtonsComponent/RatingButtonsComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component/RatingLikeButtonComponent/RatingLikeButtonComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/registration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component/AboutPhotoComponent/AboutPhotoComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -527,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reducers/Reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions/MakePhotos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -541,30 +544,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/component/Photos/Photos.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component/MainComponent/MainComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+        <state relative-caret-position="442">
+          <caret line="26" column="75" lean-forward="true" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/AboutPhotoComponent/AboutPhotoComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reducers/Reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/RatingButtonsComponent/RatingButtonsComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -573,8 +583,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/component/RegistrationComponent/RegistrationComponent.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/RatingLikeButtonComponent/RatingLikeButtonComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actions/ChangeRatingAction.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/Photos/Photos.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/MainComponent/MainComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

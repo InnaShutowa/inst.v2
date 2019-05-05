@@ -4,19 +4,18 @@ import {createStore} from "redux";
 import Reducer from "../../reducers/Reducer";
 import {ChangeRatingConstant} from "../../constants/ActionTypes";
 import ChangeRatingAction from "../../actions/ChangeRatingAction";
+import AddPhotoAction from "../../actions/AddPhotoAction";
 
-const store = createStore(Reducer);
-
-
-function HandlerClick(){
+function HandlerClick(id){
     //store.dispatch(ChangeRatingAction(id, 1));
     console.log("ну и что за");
     ///console.log(id);
 }
 
 class RatingLikeButtonComponent extends Component{
+
     render(){
-        return <button onClick={HandlerClick} className={style.like}>+</button>;
+        return <button onClick={()=>HandlerClick(this.props.id)} className={style.like}>+</button>
     }
 }
 

@@ -3,10 +3,13 @@ import style from "./styles.css";
 import Photos from "../Photos/Photos";
 import {connect} from "react-redux";
 import AddPhotoAction from "../../actions/AddPhotoAction";
+import ChangeRatingAction from "../../actions/ChangeRatingAction";
 
-const mapStateToProps = state=> ({
-    photos: state.photos
-});
+const mapStateToProps = function(state){
+    return {
+        photos: state.photos
+    };
+};
 
 
 
@@ -27,5 +30,6 @@ class MainComponent extends Component {
                 </div>
     }
 }
+
 
 export default connect(mapStateToProps) (MainComponent);
