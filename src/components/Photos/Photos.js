@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import style from "./styles.css";
 import AboutPhotoComponent from "../AboutPhotoComponent/AboutPhotoComponent";
-import MakePhotos from "../../functions/MakePhotos";
+import MakePhotos from "../../helpers/MakePhotos";
 
 let arrr = [];
 
 class Photos extends Component{
     render(){
-        arrr = MakePhotos(this.props);
+        console.log("whtadhsdjfv");
+        console.log(this.props.photos);
+        arrr = MakePhotos(this.props.photos);
+        console.log("ssssas");
+        console.log(arrr);
         return <div className={style.table}> {
             arrr.map(little => (
                 <div className={style.row}>

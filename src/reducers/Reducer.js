@@ -49,7 +49,7 @@ function Reducer (state = initialState, action) {
         case AddPhotoConstant:{
             console.log("11111 ");
             let stateCopy = {
-                photos: {
+                photos:{
                     1: {
                         name: 'Сова',
                         url: "http://localhost:9000/materials/sova.jpg",
@@ -78,7 +78,7 @@ function Reducer (state = initialState, action) {
             //});
 
             let stateCopy = {
-                photos: {
+                photos:{
                     1: {
                         name: 'Сова',
                         url: "http://localhost:9000/materials/sova.jpg",
