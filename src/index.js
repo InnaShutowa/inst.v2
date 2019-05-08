@@ -14,6 +14,7 @@ import AddPhotoAction from "../actions/AddPhotoAction";
 
 const store = createStore(Reducer);
 
+//store.dispatch(AddPhotoAction("kds", "http://localhost:9000/materials/pictt.jpg", 5));
 
 console.log(store.getState());
 

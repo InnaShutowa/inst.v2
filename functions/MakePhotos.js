@@ -2,7 +2,10 @@ function MakePhotos(photos){
     let arr = [];
     let littleArr = [];
     let i = 0;
-    photos.map(ph=>{
+    let photosMap = Object.values(photos.photos);
+    console.log(photosMap);
+    photosMap.map(ph=>{
+        console.log(ph);
         if (i<3){
             littleArr.push(ph);
             i++;

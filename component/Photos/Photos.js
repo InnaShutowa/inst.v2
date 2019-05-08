@@ -7,7 +7,7 @@ let arrr = [];
 
 class Photos extends Component{
     render(){
-        arrr = MakePhotos(this.props.photos);
+        arrr = MakePhotos(this.props);
         return <div className={style.table}> {
             arrr.map(little => (
                 <div className={style.row}>
