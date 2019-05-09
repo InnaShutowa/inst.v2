@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import style from "./styles.css";
-import Photos from "../Photos/Photos";
 import {connect} from "react-redux";
-import AddPhotoAction from "../../actions/AddPhotoAction";
+
+import Photos from "../Photos/Photos";
 import ChangeRatingAction from "../../actions/ChangeRatingAction";
+
+import style from "./styles/styles.css";
+
 
 const mapStateToProps = function(state){
 
@@ -22,7 +24,6 @@ const mapDispatchToProps = (dispatch) => {
 
 
 class MainComponent extends Component {
-
     render() {
         console.log(this.props.state);
         console.log("помогите");

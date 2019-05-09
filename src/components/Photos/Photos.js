@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import style from "./styles.css";
-import AboutPhotoComponent from "../AboutPhotoComponent/AboutPhotoComponent";
+import style from "./styles/styles.css";
+import AboutPhotoComponent from "../AboutPhoto/AboutPhoto";
 import MakePhotos from "../../helpers/MakePhotos";
 
 let arrr = [];

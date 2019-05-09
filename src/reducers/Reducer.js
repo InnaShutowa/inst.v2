@@ -1,30 +1,34 @@
-import {AddPhotoConstant, ChangeRatingConstant} from "../constants/ActionTypes";
+import {
+    ADD_PHOTO_CONSTANT, CHANGE_RATING_CONSTANT,
+    MAKE_ONE_PHOTO_FOR_TEST,
+    MAKE_ONE_PHOTO_FOR_TEST_CONSTANT
+} from "../constants/ActionTypes";
 
 let initialState = {
             photos:{
                 1:{
                         name: 'Сова',
-                        url:"http://localhost:9000/materials/sova.jpg",
+                        url:"/src/assets/sova.jpg",
                         likes: 5
                 },
                 2:{
                         name: 'Пейзажик',
-                        url:"http://localhost:9000/materials/pict.jpg",
+                        url:"/src/assets/pict.jpg",
                         likes: 4
                 },
                 3:{
                         name: 'Жизнь моими глазами',
-                        url:"http://localhost:9000/materials/pictt.jpg",
+                        url:"/src/assets/pictt.jpg",
                         likes:3,
                 },
                 4:{
                         name: 'Несбывшийся хедер сайта',
-                        url:"http://localhost:9000/materials/fon.jpg",
+                        url:"/src/assets/fon.jpg",
                         likes:8
                 },
                 5:{
                         name: 'Сбывшийся хедер сайта',
-                        url:"http://localhost:9000/materials/fon1.jpg",
+                        url:"/src/assets/fon1.jpg",
                         likes:8
                 }
             }
@@ -45,26 +49,37 @@ function Reducer (state = initialState, action) {
     };
 
     switch(action.type){
-        // добавляем фотку
-        case AddPhotoConstant:{
-            console.log("11111 ");
-            let stateCopy = {
-                photos:{
+        case MAKE_ONE_PHOTO_FOR_TEST_CONSTANT:{
+            state = {
+                photos: {
                     1: {
                         name: 'Сова',
-                        url: "http://localhost:9000/materials/sova.jpg",
+                        url: "/src/assets/sova.jpg",
                         likes: 5
                     }
                 }
             };
-            state = stateCopy;
-                //Object.assign({}, state);
+            //Object.assign({}, state);
 
             console.log(state);
             return state;
         }
+        // добавляем фотку
+        case ADD_PHOTO_CONSTANT:{
+             state = {
+                photos:{
+                    1: {
+                        name: 'Сова',
+                        url: "/src/assets/sova.jpg",
+                        likes: 5
+                    }
+                }
+            };
+            console.log(state);
+            return state;
+        }
         // изменяем рейтинг (лайк/дизлайк)
-        case ChangeRatingConstant:{
+        case CHANGE_RATING_CONSTANT:{
             console.log("изменилось что ли");
 
             //initialState = state;
@@ -81,7 +96,7 @@ function Reducer (state = initialState, action) {
                 photos:{
                     1: {
                         name: 'Сова',
-                        url: "http://localhost:9000/materials/sova.jpg",
+                        url: "/src/assets/sova.jpg",
                         likes: 5
                     }
                 }

@@ -2,7 +2,7 @@ import * as types from '../constants/ActionTypes';
 
 function AddPhotoAction(name, url, likes) {
     return {
-        type: types.AddPhotoConstant,
+        type: types.ADD_PHOTO_CONSTANT,
         name,
         url,
         likes

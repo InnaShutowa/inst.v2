@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import style from "./styles.css";
-import RatingButtonsComponent from "../RatingButtonsComponent/RatingButtonsComponent";
+import style from "./styles/styles.css";
+import RatingButtonsComponent from "../RatingButtons/RatingButtons";
 
 
 class AboutPhotoComponent extends Component {

@@ -1,9 +1,8 @@
 import * as types from '../constants/ActionTypes';
 
 function ChangeRatingAction(id, rating) {
-console.log("sdasd");
     return {
-        type: types.ChangeRatingConstant,
+        type: types.CHANGE_RATING_CONSTANT,
         id,
         rating,
     };

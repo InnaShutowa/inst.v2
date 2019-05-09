@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import style from "./styles.css";
-import RatingLikeButtonComponent from "../RatingLikeButtonComponent/RatingLikeButtonComponent";
+import style from "./styles/styles.css";
+import RatingLikeButtonComponent from "../RatingLikeButton/RatingLikeButton";
 
-class RatingButtonsComponent extends Component{
+class RatingButtons extends Component{
     render(){
         return <div className={style.elms}>
                     <RatingLikeButtonComponent id={this.props.id}/>
@@ -12,4 +12,4 @@ class RatingButtonsComponent extends Component{
     }
 }
 
-export default RatingButtonsComponent;
+export default RatingButtons;

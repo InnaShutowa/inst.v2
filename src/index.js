@@ -1,15 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-
-import {BrowserRouter, Route, withRouter} from "react-router-dom";
-
-import RegistrationComponent from "../component/RegistrationComponent/RegistrationComponent";
-import MainComponent from "../component/MainComponent/MainComponent";
-import HeaderComponent from "../component/HeaderComponent/HeaderComponent";
-import Reducer from "../reducers/Reducer";
 import {createStore} from "redux";
 import Provider from "react-redux/es/components/Provider";
-import AddPhotoAction from "../actions/AddPhotoAction";
+import {BrowserRouter, Route} from "react-router-dom";
+
+import Reducer from "./reducers/Reducer";
+import Main from "./components/Main";
+import Header from "./components/Header";
+import Registration from "./components/Registration";
 
 
 const store = createStore(Reducer);
@@ -23,9 +21,9 @@ ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <div>
-                <Route exact path={""} component={HeaderComponent}/>
-                <Route exact path={"/registration"} component={withRouter(RegistrationComponent)}/>
-                <Route exact path={"/main"} component={withRouter(MainComponent)}/>
+                <Route exact path={""} component={Header}/>
+                <Route exact path={"/registration"} component={Registration}/>
+                <Route exact path={"/main"} component={Main}/>
             </div>
         </BrowserRouter>
     </Provider>,

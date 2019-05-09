@@ -1,2 +1,3 @@
-export const AddPhotoConstant = "ADD_PHOTO";
-export const ChangeRatingConstant = "CHANGE_RATING";
+export const ADD_PHOTO_CONSTANT = "ADD_PHOTO";
+export const CHANGE_RATING_CONSTANT = "CHANGE_RATING";
+export const MAKE_ONE_PHOTO_FOR_TEST_CONSTANT = "MAKE_ONE_PHOTO_FOR_TEST";
