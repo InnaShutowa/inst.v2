@@ -5,34 +5,38 @@ import {
 } from "../constants/ActionTypes";
 
 let initialState = {
-            photos:{
-                1:{
+            photos:[
+                {
+                        id:1,
                         name: 'Сова',
                         url:"/src/assets/sova.jpg",
                         likes: 5
                 },
-                2:{
+                {
+                        id:2,
                         name: 'Пейзажик',
                         url:"/src/assets/pict.jpg",
                         likes: 4
                 },
-                3:{
+                {
+                        id:3,
                         name: 'Жизнь моими глазами',
                         url:"/src/assets/pictt.jpg",
                         likes:3,
                 },
-                4:{
+                {
+                        id:4,
                         name: 'Несбывшийся хедер сайта',
                         url:"/src/assets/fon.jpg",
                         likes:8
                 },
-                5:{
+                {
+                        id:5,
                         name: 'Сбывшийся хедер сайта',
                         url:"/src/assets/fon1.jpg",
                         likes:8
                 }
-            }
-
+            ]
         };
 
 function Reducer (state = initialState, action) {
@@ -81,29 +85,23 @@ function Reducer (state = initialState, action) {
         // изменяем рейтинг (лайк/дизлайк)
         case CHANGE_RATING_CONSTANT:{
             console.log("изменилось что ли");
-
-            //initialState = state;
-            //initialState.map(ph=>{
-              //  if (ph.id === action.id){
-              //      console.log(action.id);
-              //      ph.likes+=action.rating;
-              //      state = initialState.filter(item, ind=>ind!==1);
-              //      state = initialState.concat(ph);
-            //    }
-            //});
-
-            let stateCopy = {
-                photos:{
-                    1: {
+            initialState = state;
+            initialState.photos.map(photo=>{
+                if (photo.id === action.id){
+                    photo.likes +=action.rating;
+                }
+            });
+            state = initialState;
+            console.log(initialState);
+            state = {
+                photos:[
+                    {
                         name: 'Сова',
                         url: "/src/assets/sova.jpg",
                         likes: 5
                     }
-                }
+                ]
             };
-
-            console.log(initialState);
-            state = stateCopy;
             return state;
         }
         default:{

@@ -8,19 +8,11 @@ import style from "./styles/styles.css";
 
 
 const mapStateToProps = function(state){
-
     return {
         state
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        changeRationAction: (id, a) => {
-            dispatch(ChangeRatingAction(id, a));
-        }
-    }
-};
 
 
 class MainComponent extends Component {
@@ -29,8 +21,7 @@ class MainComponent extends Component {
         console.log("помогите");
         return <div>
                     <div className={style.category}>
-                        <div className={style.font}><button onClick={()=>this.props.changeRationAction(1,1)}
-                                                            className={style.button}>Популярное</button></div>
+                        <div className={style.font}><button className={style.button}>Популярное</button></div>
                         <a className={style.font}>|</a>
                         <div className={style.font}><button className={style.button}>Новое</button></div>
                     </div>
@@ -43,4 +34,4 @@ class MainComponent extends Component {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps) (MainComponent);
+export default connect(mapStateToProps) (MainComponent);
