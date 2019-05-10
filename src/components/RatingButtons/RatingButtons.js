@@ -12,10 +12,7 @@ const mapStateToProps = function(state){
 const mapDispatchToProps = (dispatch) => {
     return {
         changeRationAction: (id, a) => {
-            console.log("лучше бы я была бомжом");
-            console.log(id);
             dispatch(ChangeRatingAction(id, a));
-
         }
     }
 };
@@ -26,15 +23,21 @@ class RatingButtons extends Component{
 
     render(){
         return <div className={style.elms}>
-                    <button onClick={()=>this.props.changeRationAction(this.props.id,1)} className={style.like}>+</button>
+                    <button ref={"likeButton"} onClick={()=>{
+                        if (this.refs.likeButton.getAttribute("disabled")!=="disabled"){
+                            this.props.changeRationAction(this.props.id,1);
+                        }
+
+
+                        this.refs.likeButton.setAttribute("disabled", "disabled");
+                        this.refs.dislikeButton.setAttribute("disabled", "disabled");
+                    }} className={style.like}>+</button>
                     <p className={style.text}>{this.props.photos.map(a=>{
                         if (a.id===this.props.id){
-                            console.log("да что за жесть");
-                            console.log(a);
                             return a.likes;
                         }
                     })}</p>
-                    <button className={style.dislike}>-</button>
+                    <button ref={"dislikeButton"} onClick={()=>this.props.changeRationAction(this.props.id,-1)} className={style.dislike}>-</button>
                 </div>
     }
 }

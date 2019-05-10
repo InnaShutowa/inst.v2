@@ -85,23 +85,23 @@ function Reducer (state = initialState, action) {
         // изменяем рейтинг (лайк/дизлайк)
         case CHANGE_RATING_CONSTANT:{
             console.log("изменилось что ли");
-            initialState = state;
-            initialState.photos.map(photo=>{
-                if (photo.id === action.id){
-                    photo.likes +=action.rating;
+            let inState =  [];
+            state.photos.map(photo=>{
+                if (photo.id !== action.id){
+                    inState.push(photo);
+                } else{
+                    if (action.rating+photo.likes>=0){
+                        photo.likes+=action.rating;
+                    }
+                    inState.push(photo);
                 }
             });
-            state = initialState;
-            console.log(initialState);
             state = {
-                photos:[
-                    {
-                        name: 'Сова',
-                        url: "/src/assets/sova.jpg",
-                        likes: 5
-                    }
-                ]
+                photos: inState
             };
+
+            console.log(state);
+
             return state;
         }
         default:{

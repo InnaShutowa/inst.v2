@@ -18,7 +18,6 @@ const mapStateToProps = function(state){
 class MainComponent extends Component {
     render() {
         console.log(this.props.state);
-        console.log("помогите");
         return <div>
                     <div className={style.category}>
                         <div className={style.font}><button className={style.button}>Популярное</button></div>
