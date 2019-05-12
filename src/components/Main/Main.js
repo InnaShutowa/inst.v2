@@ -6,6 +6,7 @@ import Photos from "../Photos";
 import style from "./styles/styles.css";
 import SortPhotosAction from "../../actions/SortPhotosAction";
 import OrderByAction from "../../actions/OrderByAction";
+import OrderByDescAction from "../../actions/OrderByDescAction";
 
 
 const mapStateToProps = function (state) {
@@ -16,8 +17,8 @@ const mapStateToProps = function (state) {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        sortPhotosAction: () => {
-            dispatch(SortPhotosAction(21));
+        orderByDescAction: () => {
+            dispatch(OrderByDescAction());
         },
         orderByAction: () => {
             dispatch(OrderByAction());
@@ -29,16 +30,15 @@ let buff = 0;
 class MainComponent extends Component {
     render() {
         if (buff === 0) {
-            this.props.sortPhotosAction();
+            this.props.orderByDescAction();
             buff = 1;
         }
         return <div>
-
             <div className={style.category}>
                 <div className={style.font}>
                     <button ref={"popular"}
                             onClick={() => {
-                                this.props.sortPhotosAction();
+                                this.props.orderByDescAction();
                                 this.refs.popular.setAttribute("class", style.selectedButton);
                                 this.refs.news.setAttribute("class", style.button);
                                 // ставим активной кнопку "по убыванию"
@@ -67,7 +67,7 @@ class MainComponent extends Component {
                         this.refs.buttonOrderBy.setAttribute("class", style.fontLink);
                         this.refs.buttonOrderByDesc.setAttribute("disabled", "disabled");
                         this.refs.buttonOrderBy.removeAttribute("disabled");
-                        this.props.orderByAction();
+                        this.props.orderByDescAction();
 
                     }} ref={"buttonOrderByDesc"} className={style.selectedFontLink}>По убыванию
                     </button>
