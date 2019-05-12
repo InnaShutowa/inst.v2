@@ -1,47 +1,75 @@
 import {
     ADD_PHOTO_CONSTANT, CHANGE_RATING_CONSTANT,
-    MAKE_ONE_PHOTO_FOR_TEST,
-    MAKE_ONE_PHOTO_FOR_TEST_CONSTANT
+    MAKE_ONE_PHOTO_FOR_TEST_CONSTANT, ORDER_BY_CONSTANT,
+    SORT_PHOTOS_CONSTANT
 } from "../constants/ActionTypes";
 
 let initialState = {
-            photos:[
-                {
-                        id:1,
-                        name: 'Сова',
-                        url:"/src/assets/sova.jpg",
-                        likes: 5
-                },
-                {
-                        id:2,
-                        name: 'Пейзажик',
-                        url:"/src/assets/pict.jpg",
-                        likes: 4
-                },
-                {
-                        id:3,
-                        name: 'Жизнь моими глазами',
-                        url:"/src/assets/pictt.jpg",
-                        likes:3,
-                },
-                {
-                        id:4,
-                        name: 'Несбывшийся хедер сайта',
-                        url:"/src/assets/fon.jpg",
-                        likes:8
-                },
-                {
-                        id:5,
-                        name: 'Сбывшийся хедер сайта',
-                        url:"/src/assets/fon1.jpg",
-                        likes:8
-                }
-            ]
-        };
+    sort: 0,
+    photos: [
+        {
+            id: 1,
+            name: 'Сова',
+            url: "/src/assets/sova.jpg",
+            likes: 5
+        },
+        {
+            id: 2,
+            name: 'Пейзажик',
+            url: "/src/assets/pict.jpg",
+            likes: 4
+        },
+        {
+            id: 3,
+            name: 'Жизнь моими глазами',
+            url: "/src/assets/pictt.jpg",
+            likes: 3,
+        },
+        {
+            id: 4,
+            name: 'Несбывшийся хедер сайта',
+            url: "/src/assets/fon.jpg",
+            likes: 8
+        },
+        {
+            id: 5,
+            name: 'Сбывшийся хедер сайта',
+            url: "/src/assets/fon1.jpg",
+            likes: 8
+        }
+    ]
+};
 
-function Reducer (state = initialState, action) {
-    if (state===undefined){
-        state=[];
+let sortedPhotos = [];
+
+
+function orderByDescending(array) {
+    let elementSortedArray = {};
+    let max = 0;
+    let newArr = [];
+    array.map(photo => {
+        if (photo.likes > max) {
+            max = photo.likes;
+            elementSortedArray = photo;
+        }
+    });
+
+    sortedPhotos.push(elementSortedArray);
+
+    array.map(photo => {
+        if (photo.id !== elementSortedArray.id) {
+            newArr.push(photo);
+        }
+    });
+
+    if (newArr.length > 0) {
+        orderByDescending(newArr);
+    }
+}
+
+function Reducer(state = initialState, action) {
+    if (state === undefined) {
+        state = [];
         console.log("мяу");
     }
 
@@ -52,8 +80,8 @@ function Reducer (state = initialState, action) {
         likes: action.likes
     };
 
-    switch(action.type){
-        case MAKE_ONE_PHOTO_FOR_TEST_CONSTANT:{
+    switch (action.type) {
+        case MAKE_ONE_PHOTO_FOR_TEST_CONSTANT: {
             state = {
                 photos: {
                     1: {
@@ -69,9 +97,9 @@ function Reducer (state = initialState, action) {
             return state;
         }
         // добавляем фотку
-        case ADD_PHOTO_CONSTANT:{
-             state = {
-                photos:{
+        case ADD_PHOTO_CONSTANT: {
+            state = {
+                photos: {
                     1: {
                         name: 'Сова',
                         url: "/src/assets/sova.jpg",
@@ -83,28 +111,71 @@ function Reducer (state = initialState, action) {
             return state;
         }
         // изменяем рейтинг (лайк/дизлайк)
-        case CHANGE_RATING_CONSTANT:{
+        case CHANGE_RATING_CONSTANT: {
             console.log("изменилось что ли");
-            let inState =  [];
-            state.photos.map(photo=>{
-                if (photo.id !== action.id){
+            let inState = [];
+            state.photos.map(photo => {
+                if (photo.id !== action.id) {
                     inState.push(photo);
-                } else{
-                    if (action.rating+photo.likes>=0){
-                        photo.likes+=action.rating;
+                } else {
+                    if (action.rating + photo.likes >= 0) {
+                        photo.likes += action.rating;
                     }
                     inState.push(photo);
                 }
             });
+
+            // по убыванию
+            if (state.sort === -1){
+                sortedPhotos = [];
+                orderByDescending(state.photos);
+                state = {
+                  photos: sortedPhotos,
+                  sort: -1
+                };
+                return state;
+            }
+            // по возрастанию
+            if (state.sort === 1){
+                sortedPhotos = [];
+                orderByDescending(state.photos);
+                sortedPhotos.reverse();
+                state = {
+                    photos: sortedPhotos,
+                    sort: -1
+                };
+                return state;
+            }
+
+            // забили
             state = {
                 photos: inState
             };
-
-            console.log(state);
-
             return state;
         }
-        default:{
+
+        case ORDER_BY_CONSTANT:{
+            let inState = state.photos;
+            inState.reverse();
+            state = {
+                sort: 1,
+                photos:inState
+            };
+            return state;
+        }
+        case SORT_PHOTOS_CONSTANT: {
+            sortedPhotos = [];
+            orderByDescending(state.photos);
+            if (sortedPhotos.length !== 0) {
+                state = {
+                    sort: 0,
+                    photos: sortedPhotos.slice(0, action.count)
+                };
+                return state;
+            }
+            return state;
+        }
+        default: {
             return state;
         }
     }

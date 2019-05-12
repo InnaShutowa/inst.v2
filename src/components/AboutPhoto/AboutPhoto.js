@@ -1,16 +1,13 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import style from "./styles/styles.css";
-import RatingButtonsComponent from "../RatingButtons/RatingButtons";
+import RatingButtons from "../RatingButtons";
 
 
-class AboutPhotoComponent extends Component {
-    render() {
-
-        return <div>
-            <div className={style.name}>{this.props.name}</div>
-                <RatingButtonsComponent id={this.props.id} likes={this.props.likes}/>
-        </div>
-    }
-}
+const AboutPhotoComponent = (obj) => (
+    <div>
+        <div className={style.name}>{obj.name}</div>
+        <RatingButtons id={obj.id} likes={obj.likes}/>
+    </div>
+);
 
 export default AboutPhotoComponent;
