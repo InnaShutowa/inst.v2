@@ -12,7 +12,8 @@ let initialState = {
             url: SOVA_CONST,
             likes: 5,
             currentUserRating: 0,
-            date:1
+            date:1557781012,
+            user: 'Inna'
         },
         {
             id: 2,
@@ -20,7 +21,8 @@ let initialState = {
             url: LANDSCAPE_CONST,
             likes: 4,
             currentUserRating: 0,
-            date:2
+            date:1557700099,
+            user: 'NewUser'
         },
         {
             id: 3,
@@ -28,7 +30,8 @@ let initialState = {
             url: MY_LIFE_CONST,
             likes: 3,
             currentUserRating: 0,
-            date:3
+            date:1557780011,
+            user: 'NewUser1'
         },
         {
             id: 4,
@@ -36,7 +39,8 @@ let initialState = {
             url: NO_HEADER_CONST,
             likes: 8,
             currentUserRating: 0,
-            date:4
+            date:1557780000,
+            user: 'Inna'
         },
         {
             id: 5,
@@ -44,7 +48,8 @@ let initialState = {
             url: HEADER_CONST,
             likes: 8,
             currentUserRating: 0,
-            date:5
+            date:1557781068,
+            user: 'NewUser'
         }
     ]
 };

@@ -66,7 +66,7 @@ class MainComponent extends Component {
                         this.refs.buttonOrderBy.setAttribute("class", style.fontLink);
                         this.refs.buttonOrderByDesc.setAttribute("disabled", "disabled");
                         this.refs.buttonOrderBy.removeAttribute("disabled");
-                       // this.props.orderByDescAction();
+                        this.props.orderByDescAction();
 
                     }} ref={"buttonOrderByDesc"} className={style.selectedFontLink}>По убыванию
                     </button>
@@ -76,7 +76,7 @@ class MainComponent extends Component {
                         this.refs.buttonOrderBy.setAttribute("class", style.selectedFontLink);
                         this.refs.buttonOrderBy.setAttribute("disabled", "disabled");
                         this.refs.buttonOrderByDesc.removeAttribute("disabled");
-                        // this.props.orderByAction();
+                        this.props.orderByAction();
                     }} ref={"buttonOrderBy"} className={style.fontLink}>По возрастанию
                     </button>
                 </div>

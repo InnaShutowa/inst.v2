@@ -5,6 +5,10 @@ import RatingButtons from "../RatingButtons";
 
 const AboutPhotoComponent = (obj) => (
     <div>
+        {
+            console.log(obj)
+        }
+
         <div className={style.name}>{obj.name}</div>
         <RatingButtons id={obj.id} likes={obj.likes} currentUserRating={obj.currentUserRating}/>
     </div>

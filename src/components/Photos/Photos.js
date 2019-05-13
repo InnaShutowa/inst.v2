@@ -1,9 +1,10 @@
 import React from "react";
 
-import AboutPhotoComponent from "../AboutPhoto/AboutPhoto";
 import MakePhotos from "../../helpers/MakePhotos";
+import AboutPhoto from "../AboutPhoto";
 
 import style from "./styles/styles.css";
+import AboutPhotoTitle from "../AboutPhotoTitle";
 
 
 const PhotosComponent = (state) => {
@@ -14,8 +15,9 @@ const PhotosComponent = (state) => {
                 {
                     photosRow.map(photo => (
                         <div className={style.cell}>
+                            <AboutPhotoTitle user={photo.user} date={photo.date}/>
                             <img className={style.image} src={photo.url} alt={"photo"}/>
-                            <AboutPhotoComponent name={photo.name} likes={photo.likes} id={photo.id} currentUserRating={photo.currentUserRating}/>
+                            <AboutPhoto name={photo.name} likes={photo.likes} id={photo.id} currentUserRating={photo.currentUserRating}/>
                         </div>
                     ))
                 }
