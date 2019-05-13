@@ -12,7 +12,7 @@ let initialState = {
             url: SOVA_CONST,
             likes: 5,
             currentUserRating: 0,
-            date:155769987
+            date:1
         },
         {
             id: 2,
@@ -20,7 +20,7 @@ let initialState = {
             url: LANDSCAPE_CONST,
             likes: 4,
             currentUserRating: 0,
-            date:1557695432
+            date:2
         },
         {
             id: 3,
@@ -28,7 +28,7 @@ let initialState = {
             url: MY_LIFE_CONST,
             likes: 3,
             currentUserRating: 0,
-            date:1557696321
+            date:3
         },
         {
             id: 4,
@@ -36,7 +36,7 @@ let initialState = {
             url: NO_HEADER_CONST,
             likes: 8,
             currentUserRating: 0,
-            date:1557696445
+            date:4
         },
         {
             id: 5,
@@ -44,20 +44,74 @@ let initialState = {
             url: HEADER_CONST,
             likes: 8,
             currentUserRating: 0,
-            date:1557696411
+            date:5
         }
     ]
 };
 
 let sortedPhotos = [];
 
+let sortedPhotosByDate = [];
 
-function orderBy(array) {
+function orderByWithSameLikesCount(){
+    let array = [];
+    let aaa = [];
+    sortedPhotos.map(photo=>{
+        let buff = 0;
+        array.map(elems=>{
+            if (elems.id===photo.id){
+                buff = 1;
+            }
+        });
+        if (buff === 0){
+            array = [];
+            array.push(photo);
+            sortedPhotos.map(ph=>{
+                if (ph.id !== photo.id){
+                    if (ph.likes === photo.likes){
+                        array.push(ph);
+                    }
+                }
+            });
+            sortedPhotosByDate = [];
+            SortingByDate(array);
+            aaa = aaa.concat(sortedPhotosByDate);
+        }
+    });
+    sortedPhotos = aaa;
+}
+
+
+function SortingByDate(array){
+    let newArray = [];
+    let max = 0;
+    let elementSortedArray = {};
+    array.map(photo=>{
+        if (photo.date > max) {
+            max = photo.date;
+            elementSortedArray = photo;
+        }
+    });
+    sortedPhotosByDate.push(elementSortedArray);
+    array.map(photo=>{
+       if (photo.id !== elementSortedArray.id){
+           newArray.push(photo);
+       }
+    });
+    if (newArray.length!==0){
+        SortingByDate(newArray);
+    }
+    sortedPhotosByDate = sortedPhotosByDate.reverse();
+}
+
+
+
+function orderByDesc(array) {
     let elementSortedArray = {};
     let max = 0;
     let newArr = [];
     array.map(photo => {
-        if (photo.likes >= max) {
+        if (photo.likes > max) {
             max = photo.likes;
             elementSortedArray = photo;
         }
@@ -72,24 +126,11 @@ function orderBy(array) {
     });
 
     if (newArr.length > 0) {
-        orderBy(newArr);
+        orderByDesc(newArr);
     }
-    console.log(sortedPhotos);
 }
 
 function Reducer(state = initialState, action) {
-    if (state === undefined) {
-        state = [];
-        console.log("мяу");
-    }
-
-
-    const obj = {
-        name: action.name,
-        url: action.url,
-        likes: action.likes
-    };
-
     switch (action.type) {
         // изменяем рейтинг (лайк/дизлайк)
         case CHANGE_RATING_CONSTANT: {
@@ -113,9 +154,10 @@ function Reducer(state = initialState, action) {
             // по убыванию
             if (state.sort === -1) {
                 sortedPhotos = [];
-                orderBy(inState);
+                orderByDesc(inState);
+                orderByWithSameLikesCount();
                 state = {
-                    photos: sortedPhotos.reverse().slice(0, action.count),
+                    photos: sortedPhotos.slice(0, action.count),
                     sort: -1
                 };
                 return state;
@@ -123,27 +165,30 @@ function Reducer(state = initialState, action) {
             // по возрастанию
             if (state.sort === 1) {
                 sortedPhotos = [];
-                orderBy(inState);
+                orderByDesc(inState);
+                orderByWithSameLikesCount();
                 state = {
-                    photos: sortedPhotos.slice(0, action.count),
+                    photos: sortedPhotos.reverse().slice(0, action.count),
                     sort: 1
                 };
                 return state;
             }
             // забили
             state = {
-                photos: inState
+                photos: inState,
+                sort: 0
             };
             return state;
         }
 
         case ORDER_BY_CONSTANT: {
             sortedPhotos = [];
-            orderBy(state.photos);
+            orderByDesc(state.photos);
+            orderByWithSameLikesCount()
             if (sortedPhotos.length !== 0) {
                 state = {
                     sort: 1,
-                    photos: sortedPhotos.slice(0, action.count)
+                    photos: sortedPhotos.reverse().slice(0, action.count)
                 };
                 return state;
             }
@@ -152,11 +197,12 @@ function Reducer(state = initialState, action) {
 
         case ORDER_BY_DESC_CONSTANT: {
             sortedPhotos = [];
-            orderBy(state.photos);
+            orderByDesc(state.photos);
+            orderByWithSameLikesCount();
             if (sortedPhotos.length !== 0) {
                 state = {
                     sort: -1,
-                    photos: sortedPhotos.reverse().slice(0, action.count)
+                    photos: sortedPhotos.slice(0, action.count)
                 };
                 return state;
             }

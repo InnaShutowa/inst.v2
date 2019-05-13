@@ -15,7 +15,7 @@ const PhotosComponent = (state) => {
                     photosRow.map(photo => (
                         <div className={style.cell}>
                             <img className={style.image} src={photo.url} alt={"photo"}/>
-                            <AboutPhotoComponent name={photo.name} likes={photo.likes} id={photo.id}/>
+                            <AboutPhotoComponent name={photo.name} likes={photo.likes} id={photo.id} currentUserRating={photo.currentUserRating}/>
                         </div>
                     ))
                 }

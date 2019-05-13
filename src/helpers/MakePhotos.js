@@ -5,7 +5,6 @@ function MakePhotos(photos){
     let obj = photos.photos;
 
     Object.values(obj).map(ph=>{
-        console.log(ph);
         if (i<3){
             littleArr.push(ph);
             i++;

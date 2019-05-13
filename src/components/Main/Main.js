@@ -33,6 +33,7 @@ class MainComponent extends Component {
             this.props.orderByDescAction();
             buff = 1;
         }
+
         return <div>
             <div className={style.category}>
                 <div className={style.font}>
@@ -61,24 +62,21 @@ class MainComponent extends Component {
                 </div>
                 <div className={style.links}>
                     <button onClick={() => {
-                        console.log(buff);
-
                         this.refs.buttonOrderByDesc.setAttribute("class", style.selectedFontLink);
                         this.refs.buttonOrderBy.setAttribute("class", style.fontLink);
                         this.refs.buttonOrderByDesc.setAttribute("disabled", "disabled");
                         this.refs.buttonOrderBy.removeAttribute("disabled");
-                        this.props.orderByDescAction();
+                       // this.props.orderByDescAction();
 
                     }} ref={"buttonOrderByDesc"} className={style.selectedFontLink}>По убыванию
                     </button>
                     <a className={style.fontLink}>|</a>
                     <button onClick={() => {
-                        console.log(buff);
                         this.refs.buttonOrderByDesc.setAttribute("class", style.fontLink);
                         this.refs.buttonOrderBy.setAttribute("class", style.selectedFontLink);
                         this.refs.buttonOrderBy.setAttribute("disabled", "disabled");
                         this.refs.buttonOrderByDesc.removeAttribute("disabled");
-                        this.props.orderByAction();
+                        // this.props.orderByAction();
                     }} ref={"buttonOrderBy"} className={style.fontLink}>По возрастанию
                     </button>
                 </div>
