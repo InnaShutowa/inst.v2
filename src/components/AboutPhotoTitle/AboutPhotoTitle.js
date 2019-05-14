@@ -12,7 +12,6 @@ const AboutPhotoTitleComponent = (obj) => (
           new Date(obj.date*1000).getFullYear() + " "+
           new Date(obj.date*1000).getHours() + ":"+
           new Date(obj.date*1000).getMinutes()
-
         }</div>
     </div>
 );
