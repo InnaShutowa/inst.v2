@@ -1,9 +1,9 @@
 import React from "react";
-import RegistrationComponent from "./Registration";
+import Registration from "./Registration";
 
-const Registration = () => {
-    return <div>
-        <RegistrationComponent/>
-    </div>
-};
+//const Registration = () => {
+//    return <div>
+//        <RegistrationComponent/>
+//    </div>
+//};
 export default Registration;

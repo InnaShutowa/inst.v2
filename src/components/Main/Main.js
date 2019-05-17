@@ -3,10 +3,9 @@ import {connect} from "react-redux";
 
 import Photos from "../Photos";
 
-import style from "./styles/styles.css";
-import SortPhotosAction from "../../actions/SortPhotosAction";
-import OrderByAction from "../../actions/OrderByAction";
-import OrderByDescAction from "../../actions/OrderByDescAction";
+import style from "./styles.css"
+import OrderByAction from "../../store/photos/actions/OrderByAction";
+import OrderByDescAction from "../../store/photos/actions/OrderByDescAction";
 
 
 const mapStateToProps = function (state) {
@@ -27,7 +26,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 let buff = 0;
 
-class MainComponent extends Component {
+class Main extends Component {
     render() {
         if (buff === 0) {
             this.props.orderByDescAction();
@@ -83,6 +82,7 @@ class MainComponent extends Component {
             </div>
 
             <div className={style.photo}>
+                c
                 <Photos photos={this.props.state.photos}/>
             </div>
         </div>
@@ -90,4 +90,4 @@ class MainComponent extends Component {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

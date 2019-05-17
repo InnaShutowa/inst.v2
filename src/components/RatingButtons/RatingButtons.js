@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import connect from "react-redux/es/connect/connect";
 
-import ChangeRatingAction from "./actions/ChangeRatingAction";
+import ChangeRatingAction from "../../store/photos/actions/ChangeRatingAction";
 
-import style from "./styles/styles.css";
+import style from "./styles.css";
 
 const mapStateToProps = function (state) {
     return {
@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-class RatingButtonsComponent extends Component {
+class RatingButtons extends Component {
     render() {
         return <div className={style.elms}>
 
@@ -57,4 +57,4 @@ class RatingButtonsComponent extends Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RatingButtonsComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(RatingButtons);

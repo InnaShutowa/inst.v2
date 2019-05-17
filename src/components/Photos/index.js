@@ -1,9 +1,9 @@
 import React from "react";
-import PhotosComponent from "./Photos";
+import Photos from "./Photos";
 
-const Photos = (photos) =>{
-    return <div>
-        <PhotosComponent photos={photos}/>
-    </div>
-};
+//const Photos = (photos) =>{
+//    return <div>
+//        <PhotosComponent photos={photos}/>
+//    </div>
+//};
 export default Photos;

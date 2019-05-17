@@ -1,9 +1,9 @@
-import React, {Component} from "react";
-import style from "./styles/styles.css";
+import React from "react";
+import style from "./styles.css";
 import RatingButtons from "../RatingButtons";
 
 
-const AboutPhotoComponent = (obj) => (
+const AboutPhoto = (obj) => (
     <div>
         {
             console.log(obj)
@@ -14,4 +14,4 @@ const AboutPhotoComponent = (obj) => (
     </div>
 );
 
-export default AboutPhotoComponent;
+export default AboutPhoto;

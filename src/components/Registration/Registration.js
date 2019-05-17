@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class RegistrationComponent extends Component {
+class Registration extends Component {
     render() {
         return <div>
             <p>Helloooooooooo</p>
@@ -8,4 +8,4 @@ class RegistrationComponent extends Component {
     }
 }
 
-export default RegistrationComponent;
+export default Registration;

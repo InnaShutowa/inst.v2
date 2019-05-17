@@ -1,8 +1,8 @@
 import React from "react";
-import style from "./styles/styles.css";
+import style from "./styles.css";
 
 
-const AboutPhotoTitleComponent = (obj) => (
+const AboutPhotoTitle = (obj) => (
 
     <div>
         <div className={style.name}>{obj.user}</div>
@@ -16,4 +16,4 @@ const AboutPhotoTitleComponent = (obj) => (
     </div>
 );
 
-export default AboutPhotoTitleComponent;
+export default AboutPhotoTitle;

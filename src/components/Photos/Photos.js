@@ -1,14 +1,16 @@
 import React from "react";
 
-import MakePhotos from "../../helpers/MakePhotos";
 import AboutPhoto from "../AboutPhoto";
 
-import style from "./styles/styles.css";
+import style from "./styles.css";
 import AboutPhotoTitle from "../AboutPhotoTitle";
+import makePhotos from "../../helpers/makePhotos";
 
 
-const PhotosComponent = (state) => {
-    const photosList = MakePhotos(state.photos);
+const Photos = (state) => {
+    console.log(state.photos);
+    const photosList = makePhotos(state.photos);
+    console.log(photosList);
     return <div className={style.table}> {
         photosList.map(photosRow => (
             <div className={style.row}>
@@ -26,4 +28,4 @@ const PhotosComponent = (state) => {
     }
     </div>
 };
-export default PhotosComponent;
+export default Photos;

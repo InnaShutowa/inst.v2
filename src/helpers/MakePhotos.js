@@ -1,9 +1,10 @@
-function MakePhotos(photos){
+function makePhotos(photos){
     let arr = [];
     let littleArr = [];
     let i = 0;
-    let obj = photos.photos;
-
+    let obj = photos;
+    console.log("Aaa");
+console.log(photos);
     Object.values(obj).map(ph=>{
         if (i<3){
             littleArr.push(ph);
@@ -23,4 +24,4 @@ function MakePhotos(photos){
     return arr;
 }
 
-export default MakePhotos;
+export default makePhotos;

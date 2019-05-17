@@ -1,11 +1,11 @@
 import React from "react";
 
-import HeaderComponent from "./Header";
+import Header from "./Header";
 
-const Header = () => {
-    return <div>
-        <HeaderComponent/>
-    </div>
-};
+//const Header = () => {
+//    return <div>
+//        <HeaderComponent/>
+//    </div>
+//};
 
 export default Header;

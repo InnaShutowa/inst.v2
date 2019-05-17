@@ -1,6 +1,6 @@
-import {CHANGE_RATING_CONSTANT, ORDER_BY_CONSTANT, ORDER_BY_DESC_CONSTANT} from "../constants/ActionTypes";
+import {CHANGE_RATING_CONSTANT, ORDER_BY_CONSTANT, ORDER_BY_DESC_CONSTANT} from "./constants/ActionTypes";
 
-import {HEADER_CONST, LANDSCAPE_CONST, MY_LIFE_CONST, NO_HEADER_CONST, SOVA_CONST} from "../constants/PhotosUrls";
+import {HEADER_CONST, LANDSCAPE_CONST, MY_LIFE_CONST, NO_HEADER_CONST, SOVA_CONST} from "./constants/PhotosUrls";
 
 
 let initialState = {
@@ -99,9 +99,9 @@ function SortingByDate(array){
     });
     sortedPhotosByDate.push(elementSortedArray);
     array.map(photo=>{
-       if (photo.id !== elementSortedArray.id){
-           newArray.push(photo);
-       }
+        if (photo.id !== elementSortedArray.id){
+            newArray.push(photo);
+        }
     });
     if (newArray.length!==0){
         SortingByDate(newArray);

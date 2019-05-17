@@ -4,7 +4,7 @@ import Provider from "react-redux/es/components/Provider";
 import {BrowserRouter, Route} from "react-router-dom";
 
 
-import Reducer from "../../reducers/Reducer";
+import Reducer from "../../store/photos/PhotosReducer";
 import Header from "../Header";
 import Registration from "../Registration";
 import Main from "../Main";
@@ -13,7 +13,7 @@ import Main from "../Main";
 const store = createStore(Reducer);
 
 
-const AppComponent = () => {
+const App = () => {
     return <Provider store={store}>
         <BrowserRouter>
             <div>
@@ -25,4 +25,4 @@ const AppComponent = () => {
     </Provider>;
 };
 
-export default AppComponent;
+export default App;

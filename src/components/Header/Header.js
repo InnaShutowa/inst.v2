@@ -1,11 +1,10 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
 
+import style from "./styles.css";
 
-import style from "./styles/styles.css";
 
-
-class HeaderComponent extends Component {
+class Header extends Component {
     render() {
         return <div>
             <div className={style.inline}>
@@ -14,7 +13,7 @@ class HeaderComponent extends Component {
 
             <div className={style.links}>
                 <div className={style.link}><Link to={"/main"}>На главную</Link></div>
-                <a className={style.link} href={"/categoties"}>Категории</a>
+                <a className={style.link} href={"/categories"}>Категории</a>
                 <div className={style.link}>
                     <a className={style.internalLink} href={"/authorize"}>Войти</a> <br/>
                     <div className={style.internalLink}><Link to={"/registration"}>Регистрация</Link></div>
@@ -24,4 +23,4 @@ class HeaderComponent extends Component {
     }
 }
 
-export default HeaderComponent;
+export default Header;
