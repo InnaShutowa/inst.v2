@@ -6,6 +6,7 @@ import Photos from "../Photos";
 import style from "./styles.css"
 import OrderByAction from "../../store/photos/actions/OrderByAction";
 import OrderByDescAction from "../../store/photos/actions/OrderByDescAction";
+import orderByLikes from "../../helpers/orderByLikes"
 
 
 const mapStateToProps = function (state) {
@@ -16,29 +17,41 @@ const mapStateToProps = function (state) {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        orderByDescAction: () => {
-            dispatch(OrderByDescAction());
+        orderByDescAction: (ids) => {
+            dispatch(OrderByDescAction(ids));
         },
-        orderByAction: () => {
-            dispatch(OrderByAction());
+        orderByAction: (ids) => {
+            dispatch(OrderByAction(ids));
         }
     }
 };
 let buff = 0;
 
+let sortedPhotosIds = [];
+
 class Main extends Component {
     render() {
+        console.log("Sada");
+        console.log(this.props.state.photos);
         if (buff === 0) {
-            this.props.orderByDescAction();
+            sortedPhotosIds=[];
+            sortedPhotosIds = orderByLikes(this.props.state.photos);
+            console.log(sortedPhotosIds);
+            console.log("что мне делать");
+            this.props.orderByDescAction(sortedPhotosIds);
             buff = 1;
         }
-
         return <div>
             <div className={style.category}>
                 <div className={style.font}>
                     <button ref={"popular"}
                             onClick={() => {
-                                this.props.orderByDescAction();
+                                sortedPhotosIds=[];
+                                sortedPhotosIds = orderByLikes(this.props.state.photos);
+                                console.log(sortedPhotosIds);
+                                console.log("что мне делать");
+                                this.props.orderByDescAction(sortedPhotosIds);
+
                                 this.refs.popular.setAttribute("class", style.selectedButton);
                                 this.refs.news.setAttribute("class", style.button);
                                 // ставим активной кнопку "по убыванию"
@@ -65,7 +78,11 @@ class Main extends Component {
                         this.refs.buttonOrderBy.setAttribute("class", style.fontLink);
                         this.refs.buttonOrderByDesc.setAttribute("disabled", "disabled");
                         this.refs.buttonOrderBy.removeAttribute("disabled");
-                        this.props.orderByDescAction();
+                        sortedPhotosIds=[];
+                        sortedPhotosIds = orderByLikes(this.props.state.photos);
+                        console.log(sortedPhotosIds);
+                        console.log("что мне делать");
+                        this.props.orderByDescAction(sortedPhotosIds);
 
                     }} ref={"buttonOrderByDesc"} className={style.selectedFontLink}>По убыванию
                     </button>
@@ -74,8 +91,13 @@ class Main extends Component {
                         this.refs.buttonOrderByDesc.setAttribute("class", style.fontLink);
                         this.refs.buttonOrderBy.setAttribute("class", style.selectedFontLink);
                         this.refs.buttonOrderBy.setAttribute("disabled", "disabled");
+                        this.refs.buttonOrderBy.removeAttribute("disabled");
                         this.refs.buttonOrderByDesc.removeAttribute("disabled");
-                        this.props.orderByAction();
+                        sortedPhotosIds=[];
+                        sortedPhotosIds = orderByLikes(this.props.state.photos);
+                        console.log(sortedPhotosIds);
+                        console.log("что мне делать");
+                        this.props.orderByAction(sortedPhotosIds);
                     }} ref={"buttonOrderBy"} className={style.fontLink}>По возрастанию
                     </button>
                 </div>

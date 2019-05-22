@@ -1,27 +1,25 @@
 function makePhotos(photos){
-    let arr = [];
-    let littleArr = [];
+    let tablePhotos = [];
+    let rowPhotos = [];
     let i = 0;
-    let obj = photos;
-    console.log("Aaa");
-console.log(photos);
-    Object.values(obj).map(ph=>{
+
+    Object.values(photos).map(photo=>{
         if (i<3){
-            littleArr.push(ph);
+            rowPhotos.push(photo);
             i++;
         } else{
             i=0;
-            arr.push(littleArr);
+            tablePhotos.push(rowPhotos);
 
-            littleArr = [];
-            littleArr.push(ph);
+            rowPhotos = [];
+            rowPhotos.push(photo);
             i++;
         }
     });
-    if (littleArr.length!==0){
-        arr.push(littleArr);
+    if (rowPhotos.length!==0){
+        tablePhotos.push(rowPhotos);
     }
-    return arr;
+    return tablePhotos;
 }
 
 export default makePhotos;

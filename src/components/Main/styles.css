@@ -1,26 +1,27 @@
 .button {
     border-radius: 10%;
     background-color: white;
-    font-family: fantasy;
+    font-family: "Sitka Display", serif;
     color: gray;
-    font-size: medium;
+    font-size: large;
 }
 
 .selectedButton {
     border-radius: 10%;
     background-color: chocolate;
-    font-family: fantasy;
+    font-family: "Sitka Display", serif;
     color: white;
-    font-size: medium;
+    font-size: large;
 }
 
 .font {
     float: left;
     padding-right: 1%;
-    font-family: fantasy;
+    font-family: "Sitka Display", serif;
     font-weight: lighter;
     color: black;
     text-align: center;
+    font-size: large;
 }
 
 .links {
@@ -35,17 +36,17 @@
     text-align: right;
     border-radius: 10%;
     background-color: white;
-    font-weight: bold;
+    font-size: medium;
 }
 
 .selectedFontLink, .selectedFontLink:disabled{
     float: left;
     font-family: "Sitka Display", serif;
+    font-size: medium;
     color: white;
     text-align: right;
     border-radius: 10%;
     background-color: chocolate;
-    font-weight: bold;
 }
 
 .photos {

@@ -16,7 +16,7 @@
     .text{
         text-align: center;
         font-size: 30pt;
-        font-family: fantasy ;
+        font-family: "Sitka Display", serif;
         color: white;
     }
     .links{
@@ -29,9 +29,9 @@
     .link{
         padding-left: 17%;
         padding-right: 8%;
-        font-family: fantasy ;
+        font-family: "Sitka Display", serif;
         color: black;
-        font-size: medium;
+        font-size: large;
         display: inline-block;
     }
 }
@@ -44,12 +44,12 @@
         padding-bottom: 1%;
     }
     .link{
-        padding-left: 17%;
+        padding-left: 15%;
         padding-right: 8%;
         float: left;
-        font-family: fantasy ;
+        font-family: "Sitka Display", serif;
         color: black;
-        font-size: medium;
+        font-size: large;
         display: inline-block;
     }
     .internalLink{
@@ -58,7 +58,7 @@
     .text{
         text-align: center;
         font-size: 30pt;
-        font-family: fantasy ;
+        font-family: fantasy, serif;
         color: white;
     }
     .inline{

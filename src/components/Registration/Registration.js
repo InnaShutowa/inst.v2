@@ -3,7 +3,10 @@ import React, {Component} from "react";
 class Registration extends Component {
     render() {
         return <div>
-            <p>Helloooooooooo</p>
+            <p >Регистрация</p>
+            <form>
+                <input type="text" placeholder="Имя" />
+            </form>
         </div>;
     }
 }

@@ -8,6 +8,7 @@ import Reducer from "../../store/photos/PhotosReducer";
 import Header from "../Header";
 import Registration from "../Registration";
 import Main from "../Main";
+import Authorization from "../Authorizaion";
 
 
 const store = createStore(Reducer);
@@ -19,6 +20,7 @@ const App = () => {
             <div>
                 <Route exact path={""} component={Header}/>
                 <Route exact path={"/registration"} component={Registration}/>
+                <Route exact path={"/authorize"} component={Authorization}/>
                 <Route exact path={"/main"} component={Main}/>
             </div>
         </BrowserRouter>
