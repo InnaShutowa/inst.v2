@@ -19,7 +19,7 @@ class Header extends Component {
                     <div className={style.internalLink}><Link to={"/registration"}>Регистрация</Link></div>
                 </div>
             </div>
-        </div>;
+        </div>
     }
 }
 
