@@ -1,10 +1,14 @@
 import React from "react";
 import {createStore} from "redux";
+import { combineReducers } from 'redux'
+
 import Provider from "react-redux/es/components/Provider";
 import {BrowserRouter, Route} from "react-router-dom";
 
 
-import Reducer from "../../store/photos/PhotosReducer";
+import PhotosReducer from "../../store/photos/PhotosReducer";
+import UserReducer from "../../store/user/UserReducer"
+
 import Header from "../Header";
 import RegistrationFullInfo from "../RegistrationFullInfo";
 import RegistrationCreateNickname from "../RegistrationCreateNickname";
@@ -13,9 +17,15 @@ import Main from "../Main";
 import Authorization from "../Authorizaion";
 
 
-const store = createStore(Reducer);
+const commonReducer = combineReducers({
+    UserReducer,
+    PhotosReducer
+  });
+  
 
+const store = createStore(commonReducer);
 
+console.log(store.getState());
 const App = () => {
     return <Provider store={store}>
         <BrowserRouter>

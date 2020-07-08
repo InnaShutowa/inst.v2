@@ -1,11 +1,15 @@
+var path = require('path');
+
 module.exports = {
-    entry: "./src/index.js",
+    entry: path.join(__dirname, "./src/index.js"),
+    //"./src/index.js",
     mode: "development",
     output: {
         filename: "./main.js"
     },
     devServer: {
-        contentBase: "C:\\inst.v2",
+        contentBase: path.join(__dirname),
+        //"C:\\Users\\Инна\\source\\repos\\ServerApi\\front",
         compress: true,
         port: 9000,
         watchContentBase: true,
