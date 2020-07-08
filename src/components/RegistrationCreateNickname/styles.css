@@ -1,9 +1,22 @@
 .mainForm{
     text-align: center;
 }
+.check{
+    background: url("/src/assets/reload.png") no-repeat;
+    background-size: 100%;
+    width: 35px;
+    height: 35px;  
+    padding-top: 6px;  
+}
 .title{
     text-align: center;
     font-size: 30pt;
+    font-family: "Sitka Display", serif;
+    color: #696969;
+}
+.step{
+    text-align: center;
+    font-size: 20pt;
     font-family: "Sitka Display", serif;
     color: #696969;
 }
@@ -13,9 +26,14 @@
     font-family: "Sitka Display", serif;
     color: black;
 }
+.cursive{
+    text-align: center;
+    font-size: 18px;
+    font-family: "Sitka Display", serif;
+    color: black;
+    font-style: italic;
+}
 .button{
-    margin-top:2%;
-    width: 10%;
     border-radius: 10%;
     background-color: white;
     font-family: fantasy;
@@ -38,3 +56,10 @@
         height: 5px;
         width: 100%;
 }
+
+
+
+
+
+
+

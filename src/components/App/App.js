@@ -6,7 +6,9 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 import Reducer from "../../store/photos/PhotosReducer";
 import Header from "../Header";
-import Registration from "../Registration";
+import RegistrationFullInfo from "../RegistrationFullInfo";
+import RegistrationCreateNickname from "../RegistrationCreateNickname";
+import RegistrationPassword from "../RegistrationPassword";
 import Main from "../Main";
 import Authorization from "../Authorizaion";
 
@@ -19,7 +21,9 @@ const App = () => {
         <BrowserRouter>
             <div>
                 <Route exact path={""} component={Header}/>
-                <Route exact path={"/registration"} component={Registration}/>
+                <Route exact path={"/registration"} component={RegistrationCreateNickname}/>
+                <Route exact path={"/registrationnext"} component={RegistrationFullInfo}/>
+                <Route exact path={"/registrationpass"} component={RegistrationPassword}/>
                 <Route exact path={"/authorize"} component={Authorization}/>
                 <Route exact path={"/main"} component={Main}/>
             </div>

@@ -31,13 +31,9 @@ let sortedPhotosIds = [];
 
 class Main extends Component {
     render() {
-        console.log("Sada");
-        console.log(this.props.state.photos);
         if (buff === 0) {
             sortedPhotosIds=[];
             sortedPhotosIds = orderByLikes(this.props.state.photos);
-            console.log(sortedPhotosIds);
-            console.log("что мне делать");
             this.props.orderByDescAction(sortedPhotosIds);
             buff = 1;
         }
@@ -48,8 +44,6 @@ class Main extends Component {
                             onClick={() => {
                                 sortedPhotosIds=[];
                                 sortedPhotosIds = orderByLikes(this.props.state.photos);
-                                console.log(sortedPhotosIds);
-                                console.log("что мне делать");
                                 this.props.orderByDescAction(sortedPhotosIds);
 
                                 this.refs.popular.setAttribute("class", style.selectedButton);
@@ -104,7 +98,6 @@ class Main extends Component {
             </div>
 
             <div className={style.photo}>
-                c
                 <Photos photos={this.props.state.photos}/>
             </div>
         </div>

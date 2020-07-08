@@ -7,6 +7,19 @@
     font-family: "Sitka Display", serif;
     color: #696969;
 }
+.margin{
+   background: url("/src/assets/fon1.jpg") no-repeat;
+        background-size: 100%;
+        display: inline-block;
+        height: 5px;
+        width: 100%;
+}
+.step{
+    text-align: center;
+    font-size: 20pt;
+    font-family: "Sitka Display", serif;
+    color: #696969;
+}
 .unique{
     text-align: center;
     font-size: 20px;
@@ -30,11 +43,4 @@
     font-family: "Sitka Display", serif;
     color: gray;
     font-size: medium;
-}
-.margin{
-   background: url("/src/assets/fon1.jpg") no-repeat;
-        background-size: 100%;
-        display: inline-block;
-        height: 5px;
-        width: 100%;
 }
